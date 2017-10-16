@@ -1,0 +1,12 @@
+// Place your settings in this file to overwrite the default settings
+{
+  "editor.renderIndentGuides": true,
+  "diffEditor.renderSideBySide": false,
+  "window.restoreWindows": "none",
+  "telemetry.enableTelemetry": false,
+  "telemetry.enableCrashReporter": false,
+  "cmake.debugConfig": {"externalConsole": true},
+  "cmake.useCMakeServer": false,
+  //"C_Cpp.clang_format_fallbackStyle": "WebKit",
+  "C_Cpp.intelliSenseEngine": "Default"
+}
