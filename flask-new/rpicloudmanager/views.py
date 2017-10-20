@@ -32,7 +32,7 @@ def login():
   if request.method == 'POST':
     if request.form['password']!='123456':
       error = 'sorry'
-      return render_template(url_for('home.html'))
+      return render_template('login.html')
     else:
       return render_template('home.html')
   return render_template('login.html',error=error)
