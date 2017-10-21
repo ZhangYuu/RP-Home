@@ -37,6 +37,11 @@ def login():
       return render_template('home.html')
   return render_template('login.html',error=error)
 
+@app.route('/human/',methods=['POST'])
+def  human():
+  hum='No one at home'
+  while True:
+    return render_template('TH.html',v=hum)
 
 @app.route('/gpio/<int:id>',methods=['POST'])
 def gpio_led(id):

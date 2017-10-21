@@ -18,18 +18,24 @@
 		<h2 class="text-uppercase">Current Home</h2>
 	</div>
 	<div class="panel-body">
-		<label style="font-size:22px;">当前家庭温度为</label>
+		<label style="font-size:22px;">Current Temperature</label>
 		<label style="font-size:26px;color:#00F">{{var}}</label>
 		<label style="font-size:22px;">℃</label>
 	</div>
 	<div class="panel-body">
-		<label style="font-size:22px;">当前家庭湿度为</label>
+		<label style="font-size:22px;">Current Humdity</label>
 		<label style="font-size:26px;color:#BCF">{{va}}</label>
 		<label style="font-size:22px;">%</label>
 	</div>
 	<div class="panel-body">
+		<label style="font-size:22px;">Current Home</label>
+		<label style="font-size:26px;color:#BCF">{{v}}</label>
+	</div>
+	<div class="panel-body">
 		<form action="/getT/" method=post>
-			<button type=submit class="templatemo-blue-button">查询</button>
+			<button type=submit class="templatemo-blue-button">check</button>
+		</form>
+		<form action="/human/" method=post>
 		</form>
 		<form action="/skip/4" method=post>
 			<button type=submit class="templatemo-blue-button">home</button>
