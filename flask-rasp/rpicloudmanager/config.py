@@ -1,16 +1,22 @@
 import os
+
+
 class Config(object):
-  BASEDIR = os.path.abspath(os.path.dirname(__file__))
-  DATABASE = BASEDIR+'/db/rpi.db'
-  SECRET_KEY = os.urandom(24)
-  USERNAME = 'admin'
-  PASSWORD = 'default'
-  DEBUG = True
-  HOST = '0.0.0.0'
-  PORT = 2000
+    BASEDIR = os.path.abspath(os.path.dirname(__file__))
+    DATABASE = BASEDIR + '/db/rpi.db'
+    SECRET_KEY = os.urandom(24)
+    USERNAME = 'admin'
+    PASSWORD = 'default'
+    DEBUG = True
+    HOST = '0.0.0.0'
+    PORT = 2000
+
+
 class Development(Config):
-  pass
+    pass
+
+
 class Production(Config):
-  DEBUG = False
-  HOST = '0.0.0.0'
-  PORT = 8080
+    DEBUG = False
+    HOST = '0.0.0.0'
+    PORT = 8080
