@@ -1,0 +1,130 @@
+
+<html>
+<head>
+<meta charset="utf-8">
+<title>RP-Home</title>
+</head>
+<body>
+	<!--  <div class="page"> -->
+	<header>
+		<h1>
+			<a href="#">RP-home</a>
+		</h1>
+	</header>
+	<div>
+		<!--    <div class="content"> -->
+		<!-- {% block body %}{% endblock %} -->
+		<div class="templatemo-content col-1 light-gray-bg">
+			<div class="templatemo-content-container">
+				<div class="templatemo-flex-row flex-content-row">
+					<div class="col-1">
+						<div class="panel panel-default margin-10">
+							<div class="panel-heading">
+								<h2>GPIO Controlling</h2>
+							</div>
+							<div class="panel-body">
+								<div class="col-2">
+									<form action="/gpio/13" method=post>
+										<label style="font-size:22px;" class="col-md-2 col-sm-2">GPIO13</label>
+										<button id="13on" type=submit
+											class="templatemo-white-button col-md-2 col-sm-2">on</button>
+									</form>
+									<form action="/gpio/113" method=post>
+										<button type=submit
+											class="templatemo-white-button col-md-2 col-sm-2">off</button>
+									</form>
+									<form action="/gpio/s/13/{{del}}" method=post>
+									<div class="col-md-2 col-sm-2">
+										<input type="text" class="form-control" name="del" placeholder="delay time"/></div>
+										<button type=submit
+											class="templatemo-blue-button col-md-2 col-sm-2">Delay</button>
+									</form>
+								</div>
+							</div>
+							<div class="panel-body">
+								<div class="form-group col-2">
+									<form action="/gpio/19" method=post>
+										<label style="font-size:22px;" class="col-md-2 col-sm-2">GPIO19</label>
+										<button type=submit class="templatemo-white-button col-md-2 col-sm-2">on</button>
+									</form>
+									<form action="/gpio/119" method=post>
+										<button type=submit
+											class="templatemo-white-button  col-md-2 col-sm-2">off</button>
+									</form>
+									<form action="/gpio/s/19" method=post>
+									<div class="col-md-2 col-sm-2">
+										<input type="text" class="form-control" name="del" placeholder="delay time"/></div>
+										<button type=submit
+											class="templatemo-blue-button col-md-2 col-sm-2">Delay</button>
+									</form>
+								</div>
+							</div>
+							<div class="panel-body">
+								<div class="form-group col-2">
+									<form action="/gpio/26" method=post>
+								<label style="font-size:22px;" class="col-md-2">GPIO26</label>
+										<button type=submit class="templatemo-white-button col-md-2 col-sm-2">on</button>
+									</form>
+									<form action="/gpio/126" method=post>
+										<button type=submit
+											class="templatemo-white-button  col-md-2 col-sm-2">off</button>
+									</form>
+									<form action="/gpio/26s" method=post>
+									<div class="col-md-2 col-sm-2">
+										<input type="text" class="form-control" placeholder="delay time"/></div>
+										<button type=submit
+											class="templatemo-blue-button col-md-2 col-sm-2">Delay</button>
+									</form>
+								</div>
+							</div>
+							<div class="panel-body">
+								<div class="form-group col-2">
+									<form action="/gpio/21" method=post>
+								<label style="font-size:22px;" class="col-md-2">GPIO21</label>
+										<button type=submit class="templatemo-white-button col-md-2 col-sm-2">on</button>
+									</form>
+									<form action="/gpio/121" method=post>
+										<button type=submit
+											class="templatemo-white-button  col-md-2 col-sm-2">off</button>
+									</form>
+									<form action="/gpio/21s" method=post>
+									<div class="col-md-2 col-sm-2">
+										<input type="text" class="form-control" placeholder="delay time"/></div>
+										<button type=submit
+											class="templatemo-blue-button col-md-2 col-sm-2">Delay</button>
+									</form>
+								</div>
+							</div>
+							<div class="panel-body">
+								<div class="form-group col-2">
+									<form action="/gpio/20" method=post>
+								<label style="font-size:22px;" class="col-md-2">GPIO20</label>
+										<button type=submit class="templatemo-white-button col-md-2 col-sm-2">on
+											</button>
+									</form>
+									<form action="/gpio/120" method=post>
+										<button type=submit
+											class="templatemo-white-button  col-md-2 col-sm-2">off
+											</button>
+									</form>
+									<form action="/gpio/20s" method=post>
+									<div class="col-md-2 col-sm-2">
+										<input type="text" class="form-control" placeholder="delay time"/></div>
+										<button type=submit
+											class="templatemo-blue-button col-md-2 col-sm-2">Delay</button>
+									</form>
+								</div>
+							</div>
+							<div class="panel-body">
+								<form action="/skip/4" method=post>
+									<button type=submit class="templatemo-blue-button">home</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
