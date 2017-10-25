@@ -8,6 +8,8 @@ app = Flask(__name__)
 app.config.from_object('rpicloudmanager.config.Development')
 #app.config.from_object('rpicloudmanager.config.Development')
 
+app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
+
 def connect_db():
   return sqlite3.connect(app.config['DATABASE'])
 

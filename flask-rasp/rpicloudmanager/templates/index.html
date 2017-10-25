@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>RP-Home</title>
+
+</head>
+
+<body>
+
+
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row">
+    <div class="col-xs-12">
+
+        <!-- PAGE CONTENT BEGINS -->
+
+        <div class="row">
+            <div class="col-xs-12">
+                <h3 class="header smaller lighter green">Application</h3>
+
+                <p>
+                    <a href="/gpio" class="btn btn-default btn-app radius-4">
+                        <i class="icon-cog bigger-230"></i>
+                        GPIO
+                        <!--<span class="badge badge-pink">+3</span>-->
+                    </a>
+
+                    <a href="/th" class="btn btn-app btn-primary no-radius">
+                        <i class="icon-tasks bigger-230"></i>
+                        Sensors
+                        <!--<span class="badge badge-warning badge-left">11</span>-->
+                    </a>
+
+                    <a href="/video" class="btn btn-app btn-success">
+                        <i class="icon-camera bigger-230"></i>
+                        Monitoring
+                    </a>
+
+
+                </p>
+            </div>
+        </div>
+
+
+        <!-- PAGE CONTENT ENDS -->
+
+    </div><!-- /.col -->
+</div><!-- /.row -->
+
+{% endblock %}
+
+</body>
+</html>
+
