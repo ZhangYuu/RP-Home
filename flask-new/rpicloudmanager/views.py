@@ -3,10 +3,17 @@ from flask import Flask, request, session, g, redirect, url_for, abort, render_t
 from contextlib import closing
 from rpicloudmanager import app
 import re
+from flask.ext.pymongo import PyMongo
+import pymongo
 #import RPi.GPIO as GPIO
+client = pymongo.MongoClient("localhost", 27017)
+db = client.test
+sensors=db.sensor
+MacNum='66666666'
 
 @app.route('/')
 def index():
+  print db.collection_names()
   return render_template('login.html')
 
 @app.route('/show_index')
@@ -30,15 +37,30 @@ def login():
   error = None
   print request.form['password']
   if request.method == 'POST':
-    if request.form['password']!='123456':
+    if request.form['password']!=db.pwd.find_one()["pwd"]:
       error = 'sorry'
-      return render_template('login.html')
+      return render_template('login.html',error=error)
     else:
       return render_template('home.html')
   return render_template('login.html',error=error)
 
+@app.route("/change_pwd",methods=["POST","GET"])
+def change_pwd():
+  error = None
+  print request.form['MAC_NUM']
+  print request.form['new_pwd']
+  if request.method == 'POST':
+    if request.form['MAC_NUM']==MacNum:
+      db.pwd.update({"type":"pwd"},{"pwd":request.form['new_pwd']})
+      error = 'success'
+      return render_template('login.html',error1=error)
+    else:
+      error = 'wrong mac number'
+      return render_template('login.html',error1=error)
+  return render_template('login.html',error1=error)
+
 @app.route('/human/',methods=['POST'])
-def  human():
+def human():
   hum='No one at home'
   while True:
     return render_template('TH.html',v=hum)
@@ -64,4 +86,7 @@ def gpio_led(id):
 def showt():
 	t=34
 	x=59
-	return render_template('TH.html',var=t,va=x)
+	y=sensors.find_one()['S1']#.count()	
+
+	print y
+	return render_template('TH.html',var=t,va=str(y))
