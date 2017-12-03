@@ -51,7 +51,7 @@ def change_pwd():
   print request.form['new_pwd']
   if request.method == 'POST':
     if request.form['MAC_NUM']==MacNum:
-      db.pwd.update({"type":"pwd"},{"pwd":request.form['new_pwd']})
+      db.pwd.update({"type":"pwd"},{"type":"pwd","pwd":request.form['new_pwd']})
       error = 'success'
       return render_template('login.html',error1=error)
     else:
@@ -84,9 +84,16 @@ def gpio_led(id):
 
 @app.route('/getT/',methods=['POST'])
 def showt():
-	t=34
-	x=59
-	y=sensors.find_one()['S1']#.count()	
-
-	print y
-	return render_template('TH.html',var=t,va=str(y))
+	#y=sensors.find_one()['S1']#.count()
+	cnt=sensors.find().count()-1
+  	csr=sensors.find().skip(cnt)
+  	for i in csr:
+    		time=i['datetime']
+        sound=i['Sound']
+        t=i['T&H'][0]
+        h=i['T&H'][1]
+        fire=i['Fire']
+        light=i['Light']
+        human=i['Human']
+        smoke=i['Smoke']
+	return render_template('TH.html',temperature=t,humidity=h,time=time,sound=sound,fire=fire,light=light,human=human,smoke=smoke)
