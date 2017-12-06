@@ -6,9 +6,10 @@ import re
 from flask.ext.pymongo import PyMongo
 import pymongo
 #import RPi.GPIO as GPIO
-client = pymongo.MongoClient("localhost", 27017)
-db = client.test
-sensors=db.sensor
+user = pymongo.MongoClient("localhost", 27017)
+db = user.test
+sensors=db.sens
+pwd = db.pwd
 MacNum='66666666'
 
 @app.route('/')
@@ -88,7 +89,7 @@ def showt():
 	cnt=sensors.find().count()-1
   	csr=sensors.find().skip(cnt)
   	for i in csr:
-    		time=i['datetime']
+    		time=i['Datetime']
         sound=i['Sound']
         t=i['T&H'][0]
         h=i['T&H'][1]
