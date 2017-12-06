@@ -8,9 +8,10 @@
 
 <body>
 
-
+<!--inherit base.html from here-->
 {% extends "base.html" %}
 {% block content %}
+
 
 <div class="row">
     <div class="col-xs-12">
@@ -22,19 +23,19 @@
                 <h3 class="header smaller lighter green">Application</h3>
 
                 <p>
-                    <a href="/gpio" class="btn btn-default btn-app radius-4">
+                    <a href="/skip/3" class="btn btn-default btn-app radius-4">
                         <i class="icon-cog bigger-230"></i>
-                        GPIO
+                        Settings
                         <!--<span class="badge badge-pink">+3</span>-->
                     </a>
 
-                    <a href="/th" class="btn btn-app btn-primary no-radius">
+                    <a href="/skip/1" class="btn btn-app btn-primary no-radius">
                         <i class="icon-tasks bigger-230"></i>
                         Sensors
                         <!--<span class="badge badge-warning badge-left">11</span>-->
                     </a>
 
-                    <a href="/video" class="btn btn-app btn-success">
+                    <a href="/skip/2" class="btn btn-app btn-success">
                         <i class="icon-camera bigger-230"></i>
                         Monitoring
                     </a>

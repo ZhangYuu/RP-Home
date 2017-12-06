@@ -10,6 +10,12 @@
 
 {% extends "base.html"%}
 {% block content %}
+<div class="page-header">
+    <h1>
+        Detector Settings
+
+    </h1>
+</div><!-- /.page-header -->
 
 <div class="row">
     <div class="col-xs-12">
@@ -22,7 +28,7 @@
             <div class="col-sm-6" id="default-buttons">
                 <h3 class="row-fluid header smaller lighter purple">
 
-                    <span class="span7"> GPIO13 </span><!-- /span -->
+                    <span class="span7"> Smoke Detector </span><!-- /span -->
 
 
                     <!--                                                <input placeholder="Delay time"/>-->
@@ -42,7 +48,7 @@
                                             </span><!-- /span -->
 
 
-                    <form class="pull-right" action="/gpio/113" method=post>
+                    <form class="pull-right" action="/gpio/118" method=post>
                         &nbsp;
                         <span class="span5">
 													<label class="inline">
@@ -58,7 +64,7 @@
 												</span><!-- /span -->
                     </form>
 
-                    <form class="pull-right" action="/gpio/13" method=post>
+                    <form class="pull-right" action="/gpio/18" method=post>
 												<span class="span5">
 													<label class="inline">
 														<small class="muted">Operation:</small>
@@ -77,9 +83,9 @@
                 </h3>
 
                 <h3 class="row-fluid header smaller lighter purple">
-                    <span class="span7"> GPIO19 </span><!-- /span -->
+                    <span class="span7"> Sound Detector </span><!-- /span -->
 
-                    <form class="pull-right" action="/gpio/19" method=post>
+                    <form class="pull-right" action="/gpio/116" method=post>
                         &nbsp;
                         <span class="span5">
 													<label class="inline">
@@ -94,7 +100,7 @@
 												</span><!-- /span -->
                     </form>
 
-                    <form class="pull-right" action="/gpio/119" method=post>
+                    <form class="pull-right" action="/gpio/16" method=post>
 												<span class="span5">
 													<label class="inline">
 														<small class="muted">Operation:</small>
@@ -112,9 +118,9 @@
 
                 <h3 class="row-fluid header smaller lighter purple">
 
-                    <span class="span7"> GPIO26 </span><!-- /span -->
+                    <span class="span7"> Fire Detector </span><!-- /span -->
 
-                    <form class="pull-right" action="/gpio/26" method=post>
+                    <form class="pull-right" action="/gpio/112" method=post>
                         &nbsp;
                         <span class="span5">
 													<label class="inline">
@@ -129,7 +135,7 @@
 												</span><!-- /span -->
                     </form>
 
-                    <form class="pull-right" action="/gpio/126" method=post>
+                    <form class="pull-right" action="/gpio/12" method=post>
 												<span class="span5">
 													<label class="inline">
 														<small class="muted">Operation:</small>
@@ -146,9 +152,9 @@
 
                 <h3 class="row-fluid header smaller lighter purple">
 
-                    <span class="span7"> GPIO21 </span><!-- /span -->
+                    <span class="span7"> Light Detector </span><!-- /span -->
 
-                    <form class="pull-right" action="/gpio/21" method=post>
+                    <form class="pull-right" action="/gpio/125" method=post>
                         &nbsp;
                         <span class="span5">
 													<label class="inline">
@@ -163,7 +169,7 @@
 												</span><!-- /span -->
                     </form>
 
-                    <form class="pull-right" action="/gpio/121" method=post>
+                    <form class="pull-right" action="/gpio/25" method=post>
 												<span class="span5">
 													<label class="inline">
 														<small class="muted">Operation:</small>
@@ -180,9 +186,9 @@
 
                 <h3 class="row-fluid header smaller lighter purple">
 
-                    <span class="span7"> GPIO20 </span><!-- /span -->
+                    <span class="span7"> Human Detector </span><!-- /span -->
 
-                    <form class="pull-right" action="/gpio/20" method=post>
+                    <form class="pull-right" action="/gpio/123" method=post>
                         &nbsp;
                         <span class="span5">
 													<label class="inline">
@@ -197,7 +203,41 @@
 												</span><!-- /span -->
                     </form>
 
-                    <form class="pull-right" action="/gpio/120" method=post>
+                    <form class="pull-right" action="/gpio/23" method=post>
+												<span class="span5">
+													<label class="inline">
+														<small class="muted">Operation:</small>
+
+														<button class="btn btn-sm btn-primary">On</button>
+                                                        <!--                                                    <button class="btn btn-sm btn-primary">Off</button>-->
+                                                        <!--                                                    <input id="id-button-borders" checked="" type="checkbox" class="ace ace-switch ace-switch-5" />-->
+
+														<span class="lbl"></span>
+													</label>
+												</span><!-- /span -->
+                    </form>
+                </h3>
+
+                <h3 class="row-fluid header smaller lighter purple">
+
+                    <span class="span7"> Temperature&Humidity Detector </span><!-- /span -->
+
+                    <form class="pull-right" action="/gpio/117" method=post>
+                        &nbsp;
+                        <span class="span5">
+													<label class="inline">
+	<!--                                                    <small class="muted">Status:</small>-->
+
+                                                        <!--                                                    <button class="btn btn-sm btn-primary">On</button>-->
+														<button class="btn btn-sm btn-primary">Off</button>
+                                                        <!--                                                    <input id="id-button-borders" checked="" type="checkbox" class="ace ace-switch ace-switch-5" />-->
+
+														<span class="lbl"></span>
+													</label>
+												</span><!-- /span -->
+                    </form>
+
+                    <form class="pull-right" action="/gpio/17" method=post>
 												<span class="span5">
 													<label class="inline">
 														<small class="muted">Operation:</small>

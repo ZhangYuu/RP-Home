@@ -9,6 +9,12 @@
 <body>
 {% extends "base.html" %}
 {% block content %}
+<div class="page-header">
+    <h1>
+        Video Monitoring
+
+    </h1>
+</div><!-- /.page-header -->
 
 <div class="row">
     <div class="col-xs-12">
@@ -22,14 +28,15 @@
                 <h3 class="row-fluid header smaller lighter purple">
                     <span class="span7"> Monitoring Video </span><!-- /span -->
                     <br>
-                    <img style="-webkit-user-select: none" src="http://172.20.10.6:8081">
+                    <img style="-webkit-user-select: none" src="http://192.168.2.103:8081">
 
 
                     <span class="span5">
                                                 <label class="pull-right inline">
                                                     <small class="muted">Monitoring:</small>
                                                     
-                                                    <input id="id-button-borders" checked="" type="checkbox"
+                                                    <input id="id-button-borders" disabled="disabled" checked=""
+                                                           type="checkbox"
                                                            class="ace ace-switch ace-switch-5"/>
                                                     <span class="lbl"></span>
                                                 </label>

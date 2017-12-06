@@ -18,10 +18,23 @@
 		<form action="/login" method="post">
 				<div>
 					<label for="password">Password：</label> 
-<input class="form-control input-sm" id="password" name="password" type="password" placeholder="password">
+		<input class="form-control input-sm" id="password" name="password" type="password" placeholder="password">
 			<button type=submit value="Login">login</button>
+			<label style="font-size:26px;color:#BCF">{{error}}</label>
 				</div>
 		</form>
+
+		<form action="/change_pwd" method="post">
+		<div>
+			<label for="MAC_NUM">Password：</label> 
+			<input class="form-control input-sm" id="MAC_NUM" name="MAC_NUM" type="MAC_NUM" placeholder="MAC_NUM">
+			<label for="new_pwd">NEW Password：</label> 
+			<input class="form-control input-sm" id="new_pwd" name="new_pwd" type="new_pwd" placeholder="new_pwd">
+			<button type=submit value="change">change</button>
+			<label style="font-size:26px;color:#BCF">{{error1}}</label>
+		</div>
+		</form>
+
 	</div>
 </body>
 </html>
