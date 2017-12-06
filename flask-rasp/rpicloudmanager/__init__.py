@@ -6,9 +6,14 @@ from contextlib import closing
 
 app = Flask(__name__)
 app.config.from_object('rpicloudmanager.config.Development')
+<<<<<<< HEAD
+# app.config.from_object('rpicloudmanager.config.Development')
+
+=======
 
 
 # app.config.from_object('rpicloudmanager.config.Development')
+>>>>>>> upstream/master
 
 def connect_db():
     return sqlite3.connect(app.config['DATABASE'])
