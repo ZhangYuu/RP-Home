@@ -1,0 +1,7 @@
+6 sensors summary:(BCM)
+1 MQ2 smoke sensor: 	18
+2 sound:		16	
+3 fire:			12
+4 light:		25
+5 human:		23
+6 temperature&humidity:	17

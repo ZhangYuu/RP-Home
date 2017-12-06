@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>RP-Home</title>
+
+</head>
+
+<body>
+
+{% extends "base.html"%}
+{% block content %}
+<div class="page-header">
+    <h1>
+        Detector Settings
+
+    </h1>
+</div><!-- /.page-header -->
+
+<div class="row">
+    <div class="col-xs-12">
+
+        <!-- PAGE CONTENT BEGINS -->
+
+        <div class="space"></div>
+
+        <div class="row">
+            <div class="col-sm-6" id="default-buttons">
+                <h3 class="row-fluid header smaller lighter purple">
+
+                    <span class="span7"> Smoke Detector </span><!-- /span -->
+
+
+                    <!--                                                <input placeholder="Delay time"/>-->
+
+                    <!--                                                <button class="btn btn-sm btn-primary">Delay</button>-->
+
+                    <span class="span5">
+                                                <label class="inline">
+                                                    <small class="muted">&nbsp;</small>
+
+                                                    <!--                                                    <button class="btn btn-sm btn-primary">Off</button>-->
+                                                    <!--                                                    <input id="id-button-borders" checked="" type="checkbox" class="ace ace-switch ace-switch-5" />-->
+
+
+                                                    <span class="lbl"></span>
+                                                </label>
+                                            </span><!-- /span -->
+
+
+                    <form class="pull-right" action="/gpio/118" method=post>
+                        &nbsp;
+                        <span class="span5">
+													<label class="inline">
+	<!--                                                    <small class="muted">Status:</small>-->
+
+                                                        <!--                                                    <button class="btn btn-sm btn-primary">On</button>-->
+														<button class="btn btn-sm btn-primary">Off</button>
+                                                        <!--                                                    <input id="id-button-borders" checked="" type="checkbox" class="ace ace-switch ace-switch-5" />-->
+
+
+														<span class="lbl"></span>
+													</label>
+												</span><!-- /span -->
+                    </form>
+
+                    <form class="pull-right" action="/gpio/18" method=post>
+												<span class="span5">
+													<label class="inline">
+														<small class="muted">Operation:</small>
+
+														<button class="btn btn-sm btn-primary">On</button>
+                                                        <!--                                                    <button class="btn btn-sm btn-primary">Off</button>-->
+                                                        <!--                                                    <input id="id-button-borders" checked="" type="checkbox" class="ace ace-switch ace-switch-5" />-->
+
+
+														<span class="lbl"></span>
+													</label>
+												</span><!-- /span -->
+                    </form>
+
+
+                </h3>
+
+                <h3 class="row-fluid header smaller lighter purple">
+                    <span class="span7"> Sound Detector </span><!-- /span -->
+
+                    <form class="pull-right" action="/gpio/116" method=post>
+                        &nbsp;
+                        <span class="span5">
+													<label class="inline">
+	<!--                                                    <small class="muted">Status:</small>-->
+
+                                                        <!--                                                    <button class="btn btn-sm btn-primary">On</button>-->
+														<button class="btn btn-sm btn-primary">Off</button>
+                                                        <!--                                                    <input id="id-button-borders" checked="" type="checkbox" class="ace ace-switch ace-switch-5" />-->
+
+														<span class="lbl"></span>
+													</label>
+												</span><!-- /span -->
+                    </form>
+
+                    <form class="pull-right" action="/gpio/16" method=post>
+												<span class="span5">
+													<label class="inline">
+														<small class="muted">Operation:</small>
+
+														<button class="btn btn-sm btn-primary">On</button>
+                                                        <!--                                                    <button class="btn btn-sm btn-primary">Off</button>-->
+                                                        <!--                                                    <input id="id-button-borders" checked="" type="checkbox" class="ace ace-switch ace-switch-5" />-->
+
+														<span class="lbl"></span>
+													</label>
+												</span><!-- /span -->
+                    </form>
+
+                </h3>
+
+                <h3 class="row-fluid header smaller lighter purple">
+
+                    <span class="span7"> Fire Detector </span><!-- /span -->
+
+                    <form class="pull-right" action="/gpio/112" method=post>
+                        &nbsp;
+                        <span class="span5">
+													<label class="inline">
+	<!--                                                    <small class="muted">Status:</small>-->
+
+                                                        <!--                                                    <button class="btn btn-sm btn-primary">On</button>-->
+														<button class="btn btn-sm btn-primary">Off</button>
+                                                        <!--                                                    <input id="id-button-borders" checked="" type="checkbox" class="ace ace-switch ace-switch-5" />-->
+
+														<span class="lbl"></span>
+													</label>
+												</span><!-- /span -->
+                    </form>
+
+                    <form class="pull-right" action="/gpio/12" method=post>
+												<span class="span5">
+													<label class="inline">
+														<small class="muted">Operation:</small>
+
+														<button class="btn btn-sm btn-primary">On</button>
+                                                        <!--                                                    <button class="btn btn-sm btn-primary">Off</button>-->
+                                                        <!--                                                    <input id="id-button-borders" checked="" type="checkbox" class="ace ace-switch ace-switch-5" />-->
+
+														<span class="lbl"></span>
+													</label>
+												</span><!-- /span -->
+                    </form>
+                </h3>
+
+                <h3 class="row-fluid header smaller lighter purple">
+
+                    <span class="span7"> Light Detector </span><!-- /span -->
+
+                    <form class="pull-right" action="/gpio/125" method=post>
+                        &nbsp;
+                        <span class="span5">
+													<label class="inline">
+	<!--                                                    <small class="muted">Status:</small>-->
+
+                                                        <!--                                                    <button class="btn btn-sm btn-primary">On</button>-->
+														<button class="btn btn-sm btn-primary">Off</button>
+                                                        <!--                                                    <input id="id-button-borders" checked="" type="checkbox" class="ace ace-switch ace-switch-5" />-->
+
+														<span class="lbl"></span>
+													</label>
+												</span><!-- /span -->
+                    </form>
+
+                    <form class="pull-right" action="/gpio/25" method=post>
+												<span class="span5">
+													<label class="inline">
+														<small class="muted">Operation:</small>
+
+														<button class="btn btn-sm btn-primary">On</button>
+                                                        <!--                                                    <button class="btn btn-sm btn-primary">Off</button>-->
+                                                        <!--                                                    <input id="id-button-borders" checked="" type="checkbox" class="ace ace-switch ace-switch-5" />-->
+
+														<span class="lbl"></span>
+													</label>
+												</span><!-- /span -->
+                    </form>
+                </h3>
+
+                <h3 class="row-fluid header smaller lighter purple">
+
+                    <span class="span7"> Human Detector </span><!-- /span -->
+
+                    <form class="pull-right" action="/gpio/123" method=post>
+                        &nbsp;
+                        <span class="span5">
+													<label class="inline">
+	<!--                                                    <small class="muted">Status:</small>-->
+
+                                                        <!--                                                    <button class="btn btn-sm btn-primary">On</button>-->
+														<button class="btn btn-sm btn-primary">Off</button>
+                                                        <!--                                                    <input id="id-button-borders" checked="" type="checkbox" class="ace ace-switch ace-switch-5" />-->
+
+														<span class="lbl"></span>
+													</label>
+												</span><!-- /span -->
+                    </form>
+
+                    <form class="pull-right" action="/gpio/23" method=post>
+												<span class="span5">
+													<label class="inline">
+														<small class="muted">Operation:</small>
+
+														<button class="btn btn-sm btn-primary">On</button>
+                                                        <!--                                                    <button class="btn btn-sm btn-primary">Off</button>-->
+                                                        <!--                                                    <input id="id-button-borders" checked="" type="checkbox" class="ace ace-switch ace-switch-5" />-->
+
+														<span class="lbl"></span>
+													</label>
+												</span><!-- /span -->
+                    </form>
+                </h3>
+
+                <h3 class="row-fluid header smaller lighter purple">
+
+                    <span class="span7"> Temperature&Humidity Detector </span><!-- /span -->
+
+                    <form class="pull-right" action="/gpio/117" method=post>
+                        &nbsp;
+                        <span class="span5">
+													<label class="inline">
+	<!--                                                    <small class="muted">Status:</small>-->
+
+                                                        <!--                                                    <button class="btn btn-sm btn-primary">On</button>-->
+														<button class="btn btn-sm btn-primary">Off</button>
+                                                        <!--                                                    <input id="id-button-borders" checked="" type="checkbox" class="ace ace-switch ace-switch-5" />-->
+
+														<span class="lbl"></span>
+													</label>
+												</span><!-- /span -->
+                    </form>
+
+                    <form class="pull-right" action="/gpio/17" method=post>
+												<span class="span5">
+													<label class="inline">
+														<small class="muted">Operation:</small>
+
+														<button class="btn btn-sm btn-primary">On</button>
+                                                        <!--                                                    <button class="btn btn-sm btn-primary">Off</button>-->
+                                                        <!--                                                    <input id="id-button-borders" checked="" type="checkbox" class="ace ace-switch ace-switch-5" />-->
+
+														<span class="lbl"></span>
+													</label>
+												</span><!-- /span -->
+                    </form>
+                </h3>
+
+
+            </div><!-- /span -->
+
+
+        </div><!-- /row -->
+
+        <hr/>
+
+
+        <hr/>
+
+
+        <!-- PAGE CONTENT ENDS -->
+
+    </div><!-- /.col -->
+</div><!-- /.row -->
+
+{% endblock %}
+</body>
+</html>
+

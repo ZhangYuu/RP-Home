@@ -1,13 +1,19 @@
 # all the imports
-import sqlite3
+from flask.ext.pymongo import PyMongo
 from flask import Flask, request, session, g, redirect, url_for, \
     abort, render_template, flash
 from contextlib import closing
 
 app = Flask(__name__)
 app.config.from_object('rpicloudmanager.config.Development')
+<<<<<<< HEAD
 # app.config.from_object('rpicloudmanager.config.Development')
 
+=======
+
+
+# app.config.from_object('rpicloudmanager.config.Development')
+>>>>>>> upstream/master
 
 def connect_db():
     return sqlite3.connect(app.config['DATABASE'])
