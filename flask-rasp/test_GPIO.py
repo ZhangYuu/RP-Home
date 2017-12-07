@@ -89,7 +89,7 @@ class GPIOEmulator:
 
 #-----------------------------------------
 #-----------------------------------------
-''' Target code to test : '''
+''' Target code to test (from all.py) : '''
 #-----------------------------------------
 #-----------------------------------------
 
@@ -134,13 +134,14 @@ print channel
 print TEST_DATA
 print bits
 
-print "Calculation result is identical to sample data ? :", TEST_DATA == bits
+assert(TEST_DATA == bits) # ensure identicalness
+print "Test OK: Emulated result is identical to sample data."
 
 data = bits # just an alias
 
 #-----------------------------------------
 #-----------------------------------------
-''' Target code to test : '''
+''' Target code to test (from all.py) : '''
 #-----------------------------------------
 #-----------------------------------------
 
@@ -165,7 +166,11 @@ tmp = humidity + humidity_point + temperature + temperature_point
 #-----------------------------------------
 #-----------------------------------------
 
+assert(check == tmp) # ensure the identicalness
+
 if check == tmp:
     print "check =", tmp
     print "Temperature:", temperature, "*C; Humidity:", humidity, "%"
+else:
+    print "Check bits and calculated results did not match!"
 
