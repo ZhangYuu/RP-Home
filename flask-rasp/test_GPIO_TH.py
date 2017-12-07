@@ -129,13 +129,13 @@ while j < 40:
 #-----------------------------------------
 #-----------------------------------------
 
-print channel
+print "Channel =", channel
 
 print TEST_DATA
 print bits
 
 assert(TEST_DATA == bits) # ensure identicalness
-print "Test OK: Emulated result is identical to sample data."
+print "Test OK: Emulated result is identical to the testing data."
 
 data = bits # just an alias
 
@@ -167,9 +167,10 @@ tmp = humidity + humidity_point + temperature + temperature_point
 #-----------------------------------------
 
 assert(check == tmp) # ensure the identicalness
+print "Test OK: Data bits are verified to be valid."
 
 if check == tmp:
-    print "check =", tmp
+    #print "check =", tmp
     print "Temperature:", temperature, "*C; Humidity:", humidity, "%"
 else:
     print "Check bits and calculated results did not match!"
