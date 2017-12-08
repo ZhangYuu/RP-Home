@@ -42,7 +42,7 @@ class GPIOEmulator:
 
 
 #------------------------------------------------
-''' sample usage: '''
+''' sample test (fire detection): '''
 
 GPIO = GPIOEmulator(GPIOEmulator.TYPE_FIRE)
 
@@ -51,7 +51,9 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(12, GPIO.IN)
 if (GPIO.input(12)) == 0:  # low level means detecting fire
     assert('Yes' == GPIO.expected_msg())
+    print "Test OK: Fire(=12) detected"
     #return ('Yes')
 else:
     assert('No' == GPIO.expected_msg())
+    print "Test OK: Fire(=12) not detected"
     #return ('No')
